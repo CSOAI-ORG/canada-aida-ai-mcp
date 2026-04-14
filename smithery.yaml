@@ -1,0 +1,8 @@
+name: canada-aida-ai-mcp
+description: MEOK AI Labs — canada aida
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/canada-aida-ai-mcp
+license: MIT
+runtime: python
+entrypoint: server.py
