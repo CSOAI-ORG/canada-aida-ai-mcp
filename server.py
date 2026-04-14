@@ -17,6 +17,11 @@ Install: pip install mcp
 Run:     python server.py
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import json
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
@@ -298,7 +303,7 @@ def classify_ai_system(
     interprovincial_trade: bool = True,
     caller: str = "anonymous",
     tier: str = "free",
-) -> str:
+api_key: str = "") -> str:
     """Classify an AI system under AIDA as high-impact or general-purpose.
     Evaluates against high-impact criteria including health/safety, human rights,
     economic impact, vulnerable populations, and bias risk.
@@ -313,14 +318,18 @@ def classify_ai_system(
         caller: Caller identifier for rate limiting
         tier: Access tier (free/pro)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _check_rate_limit(caller, tier):
-        return json.dumps({"error": err})
+        return {"error": err}
 
     if not interprovincial_trade:
-        return json.dumps({
+        return {
             "classification": "OUT_OF_SCOPE",
             "note": "AIDA applies only to AI systems in international and interprovincial trade and commerce. Provincial legislation may apply.",
-        })
+        }
 
     desc_lower = system_description.lower() + " " + system_purpose.lower()
     users_lower = " ".join(target_users).lower()
@@ -422,7 +431,7 @@ def classify_ai_system(
         ),
     }
 
-    return json.dumps(result, indent=2)
+    return result
 
 
 # ---------------------------------------------------------------------------
@@ -437,7 +446,7 @@ def impact_assessment(
     mitigation_measures: Optional[list[str]] = None,
     caller: str = "anonymous",
     tier: str = "free",
-) -> str:
+api_key: str = "") -> str:
     """Perform an AI impact assessment per AIDA requirements (Sections 7-8).
     Evaluates potential harms, biased output risks, and required mitigation
     measures for high-impact AI systems.
@@ -451,8 +460,12 @@ def impact_assessment(
         caller: Caller identifier for rate limiting
         tier: Access tier (free/pro)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _check_rate_limit(caller, tier):
-        return json.dumps({"error": err})
+        return {"error": err}
 
     existing_mitigations = set(m.lower() for m in (mitigation_measures or []))
 
@@ -530,7 +543,7 @@ def impact_assessment(
         },
     }
 
-    return json.dumps(result, indent=2)
+    return result
 
 
 # ---------------------------------------------------------------------------
@@ -546,7 +559,7 @@ def compliance_check(
     notification_procedures: bool = False,
     caller: str = "anonymous",
     tier: str = "free",
-) -> str:
+api_key: str = "") -> str:
     """Check compliance with AIDA obligations. Evaluates whether a responsible
     person meets all AIDA requirements for their AI system classification.
 
@@ -560,8 +573,12 @@ def compliance_check(
         caller: Caller identifier for rate limiting
         tier: Access tier (free/pro)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _check_rate_limit(caller, tier):
-        return json.dumps({"error": err})
+        return {"error": err}
 
     is_high = system_classification.upper() == "HIGH_IMPACT"
     measures_lower = set(m.lower() for m in measures_in_place)
@@ -661,7 +678,7 @@ def compliance_check(
         ],
     }
 
-    return json.dumps(result, indent=2)
+    return result
 
 
 # ---------------------------------------------------------------------------
@@ -672,7 +689,7 @@ def crosswalk_to_eu_ai_act(
     focus_area: str = "all",
     caller: str = "anonymous",
     tier: str = "free",
-) -> str:
+api_key: str = "") -> str:
     """Map AIDA requirements to EU AI Act obligations. Essential for
     organizations operating in both Canadian and European markets, showing
     where compliance overlaps and where additional measures are needed.
@@ -682,8 +699,12 @@ def crosswalk_to_eu_ai_act(
         caller: Caller identifier for rate limiting
         tier: Access tier (free/pro)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _check_rate_limit(caller, tier):
-        return json.dumps({"error": err})
+        return {"error": err}
 
     focus_filters = {
         "classification": ["classification"],
@@ -748,7 +769,7 @@ def crosswalk_to_eu_ai_act(
         ),
     }
 
-    return json.dumps(result, indent=2)
+    return result
 
 
 # ---------------------------------------------------------------------------
@@ -763,7 +784,7 @@ def generate_documentation(
     document_type: str = "public_description",
     caller: str = "anonymous",
     tier: str = "free",
-) -> str:
+api_key: str = "") -> str:
     """Generate AIDA compliance documentation including public system
     descriptions (Section 10), compliance records (Section 9), and
     notification templates (Sections 11-12).
@@ -777,8 +798,12 @@ def generate_documentation(
         caller: Caller identifier for rate limiting
         tier: Access tier (free/pro)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _check_rate_limit(caller, tier):
-        return json.dumps({"error": err})
+        return {"error": err}
 
     timestamp = datetime.now(timezone.utc).isoformat()
 
@@ -903,9 +928,9 @@ def generate_documentation(
             },
         }
     else:
-        return json.dumps({"error": f"Unknown document_type: {document_type}. Valid: public_description, compliance_record, notification_affected, notification_minister"})
+        return {"error": f"Unknown document_type: {document_type}. Valid: public_description, compliance_record, notification_affected, notification_minister"}
 
-    return json.dumps(doc, indent=2)
+    return doc
 
 
 # ---------------------------------------------------------------------------

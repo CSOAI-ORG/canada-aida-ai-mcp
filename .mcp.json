@@ -1,1 +1,193 @@
-{"name":"canada-aida-ai-mcp","vendor":"MEOK AI Labs","homepage":"https://meok.ai","repository":"https://github.com/CSOAI-ORG/canada-aida-ai-mcp","runtime":"python","entrypoint":"server.py"}
+{
+  "name": "canada-aida-ai-mcp",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** -- Sovereign AI tools for everyone.",
+  "version": "1.0.0",
+  "tools": [
+    {
+      "name": "classify_ai_system",
+      "description": "Classify an AI system under AIDA as high-impact or general-purpose.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "system_description": {
+            "type": "string"
+          },
+          "system_purpose": {
+            "type": "string"
+          },
+          "target_users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "data_types": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "deployment_context": {
+            "type": "string"
+          },
+          "interprovincial_trade": {
+            "type": "boolean"
+          },
+          "caller": {
+            "type": "string"
+          },
+          "tier": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "system_description",
+          "system_purpose",
+          "target_users",
+          "data_types"
+        ]
+      }
+    },
+    {
+      "name": "impact_assessment",
+      "description": "Perform an AI impact assessment per AIDA requirements (Sections 7-8).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "system_name": {
+            "type": "string"
+          },
+          "system_description": {
+            "type": "string"
+          },
+          "affected_populations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "risk_scenarios": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "mitigation_measures": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "caller": {
+            "type": "string"
+          },
+          "tier": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "system_name",
+          "system_description",
+          "affected_populations"
+        ]
+      }
+    },
+    {
+      "name": "compliance_check",
+      "description": "Check compliance with AIDA obligations. Evaluates whether a responsible",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "system_classification": {
+            "type": "string"
+          },
+          "measures_in_place": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "records_maintained": {
+            "type": "boolean"
+          },
+          "public_description_published": {
+            "type": "boolean"
+          },
+          "monitoring_active": {
+            "type": "boolean"
+          },
+          "notification_procedures": {
+            "type": "boolean"
+          },
+          "caller": {
+            "type": "string"
+          },
+          "tier": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "system_classification",
+          "measures_in_place"
+        ]
+      }
+    },
+    {
+      "name": "crosswalk_to_eu_ai_act",
+      "description": "Map AIDA requirements to EU AI Act obligations. Essential for",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "focus_area": {
+            "type": "string"
+          },
+          "caller": {
+            "type": "string"
+          },
+          "tier": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "generate_documentation",
+      "description": "Generate AIDA compliance documentation including public system",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "system_name": {
+            "type": "string"
+          },
+          "system_description": {
+            "type": "string"
+          },
+          "classification": {
+            "type": "string"
+          },
+          "responsible_person": {
+            "type": "string"
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "caller": {
+            "type": "string"
+          },
+          "tier": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "system_name",
+          "system_description",
+          "classification",
+          "responsible_person"
+        ]
+      }
+    }
+  ]
+}

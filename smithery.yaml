@@ -1,8 +1,118 @@
 name: canada-aida-ai-mcp
-description: MEOK AI Labs — canada aida
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/canada-aida-ai-mcp
-license: MIT
-runtime: python
-entrypoint: server.py
+description: '> **By [MEOK AI Labs](https://meok.ai)** -- Sovereign AI tools for everyone.'
+version: 1.0.0
+tools:
+- name: classify_ai_system
+  description: Classify an AI system under AIDA as high-impact or general-purpose.
+  parameters:
+  - name: system_description
+    type: string
+    required: true
+  - name: system_purpose
+    type: string
+    required: true
+  - name: target_users
+    type: array
+    required: true
+  - name: data_types
+    type: array
+    required: true
+  - name: deployment_context
+    type: string
+    required: false
+  - name: interprovincial_trade
+    type: boolean
+    required: false
+  - name: caller
+    type: string
+    required: false
+  - name: tier
+    type: string
+    required: false
+- name: impact_assessment
+  description: Perform an AI impact assessment per AIDA requirements (Sections 7-8).
+  parameters:
+  - name: system_name
+    type: string
+    required: true
+  - name: system_description
+    type: string
+    required: true
+  - name: affected_populations
+    type: array
+    required: true
+  - name: risk_scenarios
+    type: array
+    required: false
+  - name: mitigation_measures
+    type: array
+    required: false
+  - name: caller
+    type: string
+    required: false
+  - name: tier
+    type: string
+    required: false
+- name: compliance_check
+  description: Check compliance with AIDA obligations. Evaluates whether a responsible
+  parameters:
+  - name: system_classification
+    type: string
+    required: true
+  - name: measures_in_place
+    type: array
+    required: true
+  - name: records_maintained
+    type: boolean
+    required: false
+  - name: public_description_published
+    type: boolean
+    required: false
+  - name: monitoring_active
+    type: boolean
+    required: false
+  - name: notification_procedures
+    type: boolean
+    required: false
+  - name: caller
+    type: string
+    required: false
+  - name: tier
+    type: string
+    required: false
+- name: crosswalk_to_eu_ai_act
+  description: Map AIDA requirements to EU AI Act obligations. Essential for
+  parameters:
+  - name: focus_area
+    type: string
+    required: false
+  - name: caller
+    type: string
+    required: false
+  - name: tier
+    type: string
+    required: false
+- name: generate_documentation
+  description: Generate AIDA compliance documentation including public system
+  parameters:
+  - name: system_name
+    type: string
+    required: true
+  - name: system_description
+    type: string
+    required: true
+  - name: classification
+    type: string
+    required: true
+  - name: responsible_person
+    type: string
+    required: true
+  - name: document_type
+    type: string
+    required: false
+  - name: caller
+    type: string
+    required: false
+  - name: tier
+    type: string
+    required: false
