@@ -25,3 +25,6 @@ Repository = "https://github.com/CSOAI-ORG/canada-aida-ai-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
 only-include = ["server.py"]
+
+[project.scripts]
+canada_aida_ai_mcp = "server:main"
