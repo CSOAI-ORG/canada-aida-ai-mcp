@@ -1,6 +1,6 @@
 {
   "name": "canada-aida-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** -- Sovereign AI tools for everyone.",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 \n        ",
   "version": "1.0.0",
   "tools": [
     {
@@ -16,16 +16,10 @@
             "type": "string"
           },
           "target_users": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+            "type": "array"
           },
           "data_types": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+            "type": "array"
           },
           "deployment_context": {
             "type": "string"
@@ -61,24 +55,13 @@
             "type": "string"
           },
           "affected_populations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+            "type": "array"
           },
           "risk_scenarios": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
+            "type": "array"
           },
           "mitigation_measures": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
+            "type": "array"
           },
           "caller": {
             "type": "string"
@@ -104,10 +87,7 @@
             "type": "string"
           },
           "measures_in_place": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+            "type": "array"
           },
           "records_maintained": {
             "type": "boolean"
