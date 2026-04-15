@@ -1,6 +1,6 @@
 {
   "name": "canada-aida-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 \n        ",
+  "description": "Canada Aida Ai automation via MCP. Includes classify ai system, impact assessment, compliance check. By MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {

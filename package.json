@@ -1,1 +1,11 @@
-{"name":"canada-aida-ai-mcp","version":"1.0.0","description":"MEOK AI Labs — Canada Aida Compliance","author":"MEOK AI Labs","license":"MIT","repository":{"type":"git","url":"https://github.com/CSOAI-ORG/canada-aida-ai-mcp"}}
+{
+  "name": "canada-aida-ai-mcp",
+  "version": "1.0.0",
+  "description": "Canada Aida Ai automation via MCP. Includes classify ai system, impact assessment, compliance check. By MEOK AI Labs.",
+  "author": "MEOK AI Labs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSOAI-ORG/canada-aida-ai-mcp"
+  }
+}
