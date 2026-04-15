@@ -1,0 +1,58 @@
+{
+  "name": "canada-aida-ai",
+  "description": "Canada AIDA (Artificial Intelligence and Data Act) compliance server. Classify AI systems as high-impact or general under AIDA, perform impact assessments, check compliance obligations, crosswalk to EU AI Act, and generate AIDA compliance documentation. By MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/canada-aida-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "classify_ai_system",
+      "description": "Classify an AI system under AIDA as high-impact or general-purpose."
+    },
+    {
+      "name": "impact_assessment",
+      "description": "Perform an AI impact assessment per AIDA requirements (Sections 7-8)."
+    },
+    {
+      "name": "compliance_check",
+      "description": "Check compliance with AIDA obligations. Evaluates whether a responsible"
+    },
+    {
+      "name": "crosswalk_to_eu_ai_act",
+      "description": "Map AIDA requirements to EU AI Act obligations. Essential for"
+    },
+    {
+      "name": "generate_documentation",
+      "description": "Generate AIDA compliance documentation including public system"
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Data & Analytics",
+    "Security & Compliance"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
