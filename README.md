@@ -1,39 +1,38 @@
-# Canada AIDA AI MCP Server
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Compliance assessment for Canada's Artificial Intelligence and Data Act (AIDA)
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/canada-aida-ai-mcp)](https://github.com/CSOAI-ORG/canada-aida-ai-mcp/stargazers)
+
+# ucanadaU aidaU aiU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/canada-aida-ai-mcp)](https://www.npmjs.com/package/@meok-ai/canada-aida-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/canada-aida-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install canada-aida-ai-mcp
+# or
+npm install -g @meok-ai/canada-aida-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-# Run standalone
-python server.py
+See the project repository for full documentation and examples.
 
-# Or via MCP
-mcp install canada-aida-ai-mcp
-```
+## Enterprise Support
 
-## Tools
-
-This server provides comprehensive AIDA compliance tools covering:
-
-- AI system classification under Bill C-27 Part 3
-- Impact assessment generation
-- Compliance checking against AIDA requirements
-- EU AI Act crosswalk mapping
-- Documentation generation for regulatory submissions
-
-Reference: Bill C-27 Part 3 — Artificial Intelligence and Data Act, Innovation, Science and Economic Development Canada guidance.
-
-## Authentication
-
-Free tier: 10 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
