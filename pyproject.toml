@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "canada-aida-ai-mcp"
-version = "1.0.4"
+version = "1.0.5"
 readme = "README.md"
 description = "Canada Aida Ai automation via MCP. Includes classify ai system, impact assessment, compliance check. By MEOK AI Labs."
 license = {file = "LICENSE"}
