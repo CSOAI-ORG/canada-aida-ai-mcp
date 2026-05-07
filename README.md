@@ -1,3 +1,5 @@
+[![canada-aida-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/canada-aida-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/canada-aida-ai-mcp)
+
 <div align="center">
 
 [![PyPI](https://img.shields.io/pypi/v/canada-aida-ai-mcp)](https://pypi.org/project/canada-aida-ai-mcp/)
