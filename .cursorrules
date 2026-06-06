@@ -1,0 +1,9 @@
+# canada-aida-ai-mcp - Auto-trigger Rules
+
+When the user asks about canada aida, use canada-aida-ai-mcp tools: classify_ai_system, impact_assessment, compliance_check, crosswalk_to_eu_ai_act, generate_documentation
+
+**MCP server for canada aida ai mcp operations**
+
+Install: `pip install canada-aida-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

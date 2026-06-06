@@ -1,3 +1,7 @@
+mcp-name: io.github.CSOAI-ORG/canada-aida-ai-mcp
+
+<div align="center">
+
 # Canada Aida Ai MCP
 
 [![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
@@ -76,3 +80,46 @@ MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 <p align="center">
   <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
 </p>
+Each tier above the free self-host adds HMAC-signed attestations verifiable at
+`verify.meok.ai`. Linux Foundation governance on the A2A spine means EU regulated
+buyers can deploy without vendor-lock-in objections.
+
+<!-- BUY-LADDER:START -->
+
+## 💸 Try MEOK in 30 seconds — instant buy ladder
+
+| Tier | Price | What you get | Stripe |
+|---|---|---|---|
+| Smoke test | **£1** | Signed sample MCP-Hardening report + Article 50 PDF | <https://buy.stripe.com/dRmcN75ScdQS7oh1Uc8k90U> |
+| Quick Kit | **£9** | EU AI Act Article 50 implementation guide (C2PA + EU-Icon) | <https://buy.stripe.com/cNi00la8s1460ZT0Q88k90V> |
+| Founder Call | **£29** | 30-min 1-on-1 with the founder | <https://buy.stripe.com/8x228ta8s6oqbExaqI8k90W> |
+
+> Refundable. UK Stripe — VAT-clean. Builds on the 81-MCP MEOK fleet.
+> Verify any signed report at <https://meok.ai/verify>.
+
+<!-- BUY-LADDER:END -->
+
+
+## Configuration
+
+Add to your `claude_desktop_config.json` (Claude Desktop) or your MCP client config:
+
+```json
+{
+  "mcpServers": {
+    "canada-aida-ai-mcp": {
+      "command": "uvx",
+      "args": ["canada-aida-ai-mcp"]
+    }
+  }
+}
+```
+
+Or: `pip install canada-aida-ai-mcp` then run the `canada-aida-ai-mcp` command (stdio transport).
+
+## Examples
+
+Once configured, ask your assistant, for example:
+- "Use `classify_ai_system` to …"
+- "Use `impact_assessment` to …"
+- "Use `compliance_check` to …"

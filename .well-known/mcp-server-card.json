@@ -1,0 +1,28 @@
+{
+  "name": "canada-aida-ai-mcp",
+  "title": "Canada Aida Ai Mcp",
+  "description": "Canada Aida Ai automation via MCP. Includes classify ai system, impact assessment, compliance check. By MEOK AI Labs.",
+  "version": "1.0.10",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "classify_ai_system"
+    },
+    {
+      "name": "impact_assessment"
+    },
+    {
+      "name": "compliance_check"
+    },
+    {
+      "name": "crosswalk_to_eu_ai_act"
+    },
+    {
+      "name": "generate_documentation"
+    }
+  ]
+}
