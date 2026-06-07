@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "canada-aida-ai-mcp",
+    "description": "Canada Aida Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.10",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "canada-aida-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "classify_ai_system",
+      "impact_assessment",
+      "compliance_check",
+      "crosswalk_to_eu_ai_act",
+      "generate_documentation"
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "name": "canada-aida-ai-mcp",
+  "description": "Canada Aida Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/canada-aida-ai-mcp.html",
+  "version": "1.0.10",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "classify_ai_system",
+      "name": "Classify Ai System",
+      "description": "classify_ai_system via canada-aida-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "impact_assessment",
+      "name": "Impact Assessment",
+      "description": "impact_assessment via canada-aida-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "compliance_check",
+      "name": "Compliance Check",
+      "description": "compliance_check via canada-aida-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "crosswalk_to_eu_ai_act",
+      "name": "Crosswalk To Eu Ai Act",
+      "description": "crosswalk_to_eu_ai_act via canada-aida-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_documentation",
+      "name": "Generate Documentation",
+      "description": "generate_documentation via canada-aida-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
