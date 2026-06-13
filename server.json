@@ -4,9 +4,9 @@
   "version": "1.0.13",
   "description": "Canada Aida Ai MCP Server by MEOK AI Labs",
   "repository": {
-    "type": "git",
     "url": "https://github.com/CSOAI-ORG/canada-aida-ai-mcp",
-    "source": "https://github.com/CSOAI-ORG/canada-aida-ai-mcp"
+    "source": "github",
+    "id": "1210083276"
   },
   "packages": [
     {
